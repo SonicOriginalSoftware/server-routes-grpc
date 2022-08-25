@@ -6,6 +6,7 @@ import (
 	"testing"
 
 	lib "git.nathanblair.rocks/server"
+	"git.nathanblair.rocks/server/handler"
 
 	"git.nathanblair.rocks/routes/grpc"
 )
@@ -59,10 +60,7 @@ lSLm75AMeTQghz1CfVEJnXc9
 -----END PRIVATE KEY-----`)
 
 func TestHandler(t *testing.T) {
-	t.Fatalf("Not implemented yet!")
-	subdomains := []lib.SubdomainHandler{
-		grpc.New(),
-	}
+	subdomains := handler.Handlers{grpc.Prefix: grpc.New()}
 
 	cert, err := tls.X509KeyPair(cert, key)
 	if err != nil {
