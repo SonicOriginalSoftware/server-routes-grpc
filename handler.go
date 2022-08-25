@@ -8,7 +8,6 @@ import (
 	"server/net/local"
 
 	"fmt"
-	"log"
 	"net/http"
 )
 
@@ -16,8 +15,7 @@ const prefix = "grpc"
 
 // Handler handles GRPC API requests
 type Handler struct {
-	outlog *log.Logger
-	errlog *log.Logger
+	logger *logging.Logger
 }
 
 // ServeHTTP fulfills the http.Handler contract for Handler
@@ -38,7 +36,6 @@ func (handler *Handler) Address() string {
 // New returns a new Handler
 func New() *Handler {
 	return &Handler{
-		outlog: logging.NewLog(prefix),
-		errlog: logging.NewError(prefix),
+		logger: logging.New(prefix),
 	}
 }
