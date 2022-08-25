@@ -3,7 +3,7 @@
 package grpc
 
 import (
-	"server/logging"
+	"git.nathanblair.rocks/server/logging"
 
 	"net/http"
 )
