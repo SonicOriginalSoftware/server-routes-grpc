@@ -3,13 +3,14 @@
 package grpc
 
 import (
+	"git.nathanblair.rocks/server/handlers"
 	"git.nathanblair.rocks/server/logging"
 
 	"net/http"
 )
 
-// Prefix is the name used to identify the service
-const Prefix = "grpc"
+// Name is the name used to identify the service
+const Name = "grpc"
 
 // Handler handles GRPC API requests
 type Handler struct {
@@ -22,8 +23,10 @@ func (handler *Handler) ServeHTTP(writer http.ResponseWriter, request *http.Requ
 }
 
 // New returns a new Handler
-func New() *Handler {
-	return &Handler{
-		logger: logging.New(Prefix),
-	}
+func New() (handler *Handler) {
+	logger := logging.New(Name)
+	handler = &Handler{logger}
+	handlers.Register(Name, handler, logger)
+
+	return
 }
