@@ -3,8 +3,8 @@
 package grpc
 
 import (
-	"git.nathanblair.rocks/server/handlers"
-	"git.nathanblair.rocks/server/logging"
+	"git.sonicoriginal.software/server/handlers"
+	"git.sonicoriginal.software/server/logging"
 
 	"net/http"
 )
@@ -26,7 +26,7 @@ func (handler *Handler) ServeHTTP(writer http.ResponseWriter, request *http.Requ
 func New() (handler *Handler) {
 	logger := logging.New(Name)
 	handler = &Handler{logger}
-	handlers.Register(Name, handler, logger)
+	handlers.Register(Name, "", Name, handler, logger)
 
 	return
 }

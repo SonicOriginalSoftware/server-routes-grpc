@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"git.nathanblair.rocks/routes/grpc"
-	lib "git.nathanblair.rocks/server"
+	"git.sonicoriginal.software/routes/grpc"
+	lib "git.sonicoriginal.software/server"
 )
 
 var certs []tls.Certificate
