@@ -14,7 +14,7 @@ const Name = "grpc"
 
 // Handler handles GRPC API requests
 type Handler struct {
-	logger *logging.Logger
+	logger logging.Log
 }
 
 // ServeHTTP fulfills the http.Handler contract for Handler
