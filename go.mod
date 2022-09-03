@@ -6,4 +6,4 @@ require (
 	git.sonicoriginal.software/server v0.0.0
 )
 
-replace git.sonicoriginal.software/routes/grpc => github.com/SonicOriginalSoftware/server-routes-grpc v0.0.0
+replace git.sonicoriginal.software/routes/grpc => github.sonicoriginal.software/server-routes-grpc v0.0.0
