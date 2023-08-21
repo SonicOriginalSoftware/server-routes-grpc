@@ -1,4 +1,4 @@
-module git.sonicoriginal.software/routes/grpc.git
+module git.sonicoriginal.software/server-routes-grpc.git
 
 go 1.19
 

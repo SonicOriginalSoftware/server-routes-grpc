@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"testing"
 
-	"git.sonicoriginal.software/routes/grpc.git"
+	grpc "git.sonicoriginal.software/server-routes-grpc.git"
 	"git.sonicoriginal.software/server.git/v2"
 )
 

@@ -19,7 +19,7 @@ type handler struct {
 }
 
 // ServeHTTP fulfills the http.Handler contract for Handler
-func (handler *handler) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
+func (handler *handler) ServeHTTP(writer http.ResponseWriter, _ *http.Request) {
 	http.Error(writer, http.StatusText(http.StatusNotImplemented), http.StatusNotImplemented)
 }
 
